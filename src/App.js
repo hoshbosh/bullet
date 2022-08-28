@@ -35,7 +35,7 @@ function App(){
             if(length-p1Seconds==0){
               setEnd(!gameEnded)
             }
-          },1)
+          },1000)
         }else{
           interval=setInterval(()=>{
             p2SetSeconds(p2Seconds+1)
