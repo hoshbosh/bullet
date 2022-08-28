@@ -12,7 +12,7 @@ function App(){
   const [p2Seconds, p2SetSeconds]=useState(0)
   const [gameEnded, setEnd]=useState(false)
   const [increment, setIncrement]=useState(7)
-  const [length, setLength]=useState(60)
+  const [length, setLength]=useState(45)
   const [isActive, setActive]=useState(false)
   function handlePlayPause(){
     setActive(!isActive)
