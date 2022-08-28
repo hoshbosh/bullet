@@ -94,10 +94,10 @@ function App(){
         <div className='bg-slate-500 row-span-2 place-content-center col-span-2 active:bg-slate-600' onClick={startTimer}>
             <Convert sec={length-p2Seconds}/>
         </div>
-        <button className=" border-2 border-zinc-500 object-center col-span-2 active:bg-slate-300 active:-translate-y-4 transition bg-slate-200" onClick={()=>p1SetSeconds(p1Seconds-increment)}>
+        <button className=" border-2 border-slate-600 object-center col-span-2 active:bg-slate-300 active:-translate-y-4 transition bg-slate-200" onClick={()=>p1SetSeconds(p1Seconds-increment)}>
           FUCK YOU
         </button>
-        <button className="border-2 border-zinc-500 object-center col-span-2 active:bg-slate-600 active:-translate-y-4 transition bg-slate-500" onClick={()=>p2SetSeconds(p2Seconds-increment)}>
+        <button className="border-2 border-slate-300 object-center col-span-2 active:bg-slate-600 active:-translate-y-4 transition bg-slate-500" onClick={()=>p2SetSeconds(p2Seconds-increment)}>
           FUCK YOU
         </button>
       </div>
