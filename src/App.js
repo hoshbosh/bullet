@@ -11,7 +11,7 @@ function App(){
   const [player, togglePlayer]=useState(false)
   const [p2Seconds, p2SetSeconds]=useState(0)
   const [gameEnded, setEnd]=useState(false)
-  const [increment, setIncrement]=useState(5)
+  const [increment, setIncrement]=useState(7)
   const [length, setLength]=useState(60)
   const [isActive, setActive]=useState(false)
   function handlePlayPause(){
@@ -35,7 +35,7 @@ function App(){
             if(length-p1Seconds==0){
               setEnd(!gameEnded)
             }
-          },1000)
+          },1)
         }else{
           interval=setInterval(()=>{
             p2SetSeconds(p2Seconds+1)
