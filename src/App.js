@@ -4,7 +4,7 @@ import Convert from './ConvertTime'
 import { Transition } from '@headlessui/react'
 import {EndScreen} from './EndScreen'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPause, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faPause, faPlay, faCircleDot } from '@fortawesome/free-solid-svg-icons';
 
 function App(){
   const [p1Seconds, p1SetSeconds]=useState(0)
@@ -25,13 +25,6 @@ function App(){
   }
   function startTimer(){
       togglePlayer(!player)
-  }
-  function addTime(isP1){
-    if(player){
-      p1SetSeconds(p1Seconds-increment)
-    }else{
-      p2SetSeconds(p2Seconds-increment)
-    }
   }
   useEffect(()=>{
       let interval=null
@@ -90,9 +83,33 @@ function App(){
               }
             </button>
             <Convert sec={length-p1Seconds}/>
+      <Transition
+        className='flex justify-center'
+        show={player}
+        enter="transition-opacity duration-75"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-150"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
+        <FontAwesomeIcon className='text-9xl px-72' icon={faCircleDot}/>
+      </Transition>
         </div>
         <div className='bg-slate-500 row-span-2 place-content-center col-span-2 active:bg-slate-600' onClick={startTimer}>
             <Convert sec={length-p2Seconds}/>
+      <Transition
+        className='justify-center flex'
+        show={!player}
+        enter="transition-opacity duration-75"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-150"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
+        <FontAwesomeIcon className='text-9xl' icon={faCircleDot}/>
+      </Transition>
         </div>
         <button className=" border-2 border-slate-600 border-x-0 object-center col-span-2 active:bg-slate-300 active:-translate-y-4 transition bg-slate-200" onClick={()=>p1SetSeconds(p1Seconds-increment)}>
           FUCK YOU
