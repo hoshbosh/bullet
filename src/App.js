@@ -11,8 +11,8 @@ function App(){
   const [player, togglePlayer]=useState(false)
   const [p2Seconds, p2SetSeconds]=useState(0)
   const [gameEnded, setEnd]=useState(false)
-  const [increment, setIncrement]=useState(7)
-  const [length, setLength]=useState(60)
+  const [increment, setIncrement]=useState(10)
+  const [length, setLength]=useState(30)
   const [isActive, setActive]=useState(false)
   function handlePlayPause(){
     setActive(!isActive)
@@ -76,7 +76,7 @@ function App(){
       </Transition>
       <div className='grid grid-cols-4 grid-rows-3 h-screen'>
         <div className='bg-slate-200 row-span-2 place-content-center col-span-2 active:bg-slate-300' onClick={startTimer}>
-            <button className='absolute top-0 left-0 text-4xl bg-blue-300 w-16 h-16 rounded-full place-content-center text-center' onClick={handlePlayPause}>
+            <button className='absolute top-2 left-2 text-4xl bg-blue-300 w-16 h-16 rounded-full place-content-center text-center' onClick={handlePlayPause}>
               {isActive
                 ?<FontAwesomeIcon icon={faPause}/>
                 :<FontAwesomeIcon icon={faPlay}/>
