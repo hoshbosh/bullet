@@ -112,10 +112,10 @@ function App(){
       </Transition>
         </div>
         <button className=" border-2 border-slate-600 border-x-0 object-center col-span-2 active:bg-slate-300 active:-translate-y-4 transition bg-slate-200" onClick={()=>p1SetSeconds(p1Seconds-increment)}>
-          FUCK YOU
+          Player 1 loses
         </button>
         <button className="border-2 border-slate-300 border-x-0 object-center col-span-2 active:bg-slate-600 active:-translate-y-4 transition bg-slate-500" onClick={()=>p2SetSeconds(p2Seconds-increment)}>
-          FUCK YOU
+          Player 2 loses
         </button>
       </div>
     </div>
